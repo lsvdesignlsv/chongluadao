@@ -3,43 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Chống Lừa Đảo - Cùng nhau bảo vệ cộng đồng</title>
+    
+    <meta property="og:title" content="Cảnh Báo: Kiểm tra an toàn tài khoản ngay!">
+    <meta property="og:description" content="Hệ thống Chống Lừa Đảo quốc gia hỗ trợ kiểm tra độ tin cậy của website và số điện thoại.">
+    <meta property="og:image" content="thumbnail.jpg"> <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lsvdesignlsv.github.io/chongluadao/">
+
+    <title>Chống Lừa Đảo - Dự án vì cộng đồng</title>
+    
     <style>
-        /* Giao diện mô phỏng Chống Lừa Đảo */
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             margin: 0; 
-            background-color: #0d2c26; /* Màu xanh đậm của trang gốc */
+            background-color: #0d2c26; 
             color: white;
-            overflow-x: hidden;
+            overflow: hidden; /* Chống cuộn trang */
         }
 
-        /* Header giả lập */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 5%;
             background: rgba(13, 44, 38, 0.9);
+            border-bottom: 1px solid #1a4d43;
         }
 
-        .logo { font-weight: bold; font-size: 24px; color: #00ff88; }
+        .logo { font-weight: bold; font-size: 22px; color: #00ff88; }
 
-        /* Nội dung chính */
         .hero {
             text-align: center;
             padding: 80px 20px;
             background: radial-gradient(circle, #1a4d43 0%, #0d2c26 100%);
+            height: 100vh;
         }
 
-        h1 { font-size: 32px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        h1 { font-size: 28px; margin-bottom: 20px; text-transform: uppercase; line-height: 1.4; }
         h1 span { color: #00ff88; }
 
         .search-box {
             background: white;
-            padding: 10px;
-            border-radius: 5px;
-            max-width: 600px;
+            padding: 8px;
+            border-radius: 8px;
+            max-width: 500px;
             margin: 0 auto 30px;
             display: flex;
         }
@@ -47,33 +53,32 @@
         input {
             flex: 1;
             border: none;
-            padding: 10px;
+            padding: 12px;
             outline: none;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .btn-check {
             background-color: #00ff88;
             color: #0d2c26;
             border: none;
-            padding: 10px 25px;
-            border-radius: 4px;
+            padding: 10px 20px;
+            border-radius: 6px;
             font-weight: bold;
             cursor: pointer;
         }
 
-        /* Nút chính để kích hoạt troll */
         .btn-protect {
             background-color: #00ff88;
             color: #0d2c26;
             border: none;
-            padding: 15px 40px;
+            padding: 18px 45px;
             font-size: 18px;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
-            text-transform: uppercase;
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+            transition: 0.3s;
         }
 
         /* Lớp phủ Troll */
@@ -89,7 +94,7 @@
         }
 
         #troll-image { 
-            height: 100vh; /* Cao bằng màn hình */
+            height: 100%; 
             width: auto; 
             max-width: 100vw; 
             object-fit: contain; 
@@ -99,21 +104,21 @@
 <body>
 
     <header>
-        <div class="logo">@ Chống Lừa Đảo</div>
-        <div style="font-size: 12px;">VN | Tin tức | Tài nguyên</div>
+        <div class="logo">🛡️ CHỐNG LỪA ĐẢO</div>
+        <div style="font-size: 12px; opacity: 0.7;">VN | Hỗ trợ 24/7</div>
     </header>
 
     <div class="hero">
         <h1>BẠN CÓ ĐANG <br> <span>LƯỚT MẠNG AN TOÀN?</span></h1>
         
         <div class="search-box">
-            <input type="text" placeholder="Nhập đường dẫn hoặc SĐT cần kiểm tra...">
+            <input type="text" placeholder="Nhập đường dẫn cần kiểm tra...">
             <button class="btn-check">KIỂM TRA</button>
         </div>
 
-        <p style="margin-bottom: 40px; opacity: 0.8;">Hệ thống phát hiện bạn có 1 cảnh báo bảo mật chưa được xử lý.</p>
+        <p style="margin-bottom: 40px; color: #a0c4be;">Nhấn vào nút bên dưới để cập nhật danh sách đen các website lừa đảo mới nhất.</p>
         
-        <button class="btn-protect" onclick="startTroll()">BẢO VỆ NGAY</button>
+        <button class="btn-protect" onclick="startTroll()">CẬP NHẬT NGAY</button>
     </div>
 
     <div id="troll-overlay">
@@ -133,7 +138,7 @@
             audio.volume = 1.0;
             audio.play();
 
-            // Kích hoạt toàn màn hình
+            // Toàn màn hình
             const elem = document.documentElement;
             if (elem.requestFullscreen) { elem.requestFullscreen(); }
             else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); }
