@@ -3,63 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sự thật thú vị về thế giới</title>
+    <title>Cảnh Báo Chống Lừa Đảo</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
-            background-color: #f0f0f0;
-        }
-
-        /* Giao diện trang web bình thường */
-        .content {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        button:hover { background-color: #0056b3; }
-
-        /* Giao diện Troll (ẩn lúc đầu) */
-        #troll-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            z-index: 9999;
-        }
-
-        #troll-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Làm ảnh tràn màn hình */
-        }
+        body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; background-color: #f0f0f0; }
+        .content { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        button { padding: 15px 30px; font-size: 18px; background-color: #d9534f; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
+        #troll-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: black; z-index: 9999; }
+        #troll-image { width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
 <body>
 
     <div class="content">
-        <h1>Bạn có biết?</h1>
-        <p>Các nhà khoa học vừa phát hiện ra một bí mật động trời về tài năng tiềm ẩn của bạn. Nhấn vào nút bên dưới để xem kết quả phân tích!</p>
-        <button onclick="startTroll()">Bấm vào đây để xem</button>
+        <h1>Hệ Thống Cảnh Báo</h1>
+        <p>Phát hiện một nỗ lực truy cập trái phép vào tài khoản của bạn. Nhấn nút bên dưới để kiểm tra và bảo mật ngay lập tức!</p>
+        <button onclick="startTroll()">BẢO MẬT NGAY</button>
     </div>
 
     <div id="troll-overlay">
@@ -72,23 +30,14 @@
 
     <script>
         function startTroll() {
-            // 1. Hiện phần troll
-            const overlay = document.getElementById('troll-overlay');
+            document.getElementById('troll-overlay').style.display = 'block';
             const audio = document.getElementById('troll-audio');
-            
-            overlay.style.display = 'block';
-
-            // 2. Phát âm thanh (tăng âm lượng tối đa)
             audio.volume = 1.0;
             audio.play();
-
-            // 3. Cố gắng bật chế độ toàn màn hình để tăng độ dọa
             if (document.documentElement.requestFullscreen) {
                 document.documentElement.requestFullscreen();
             }
         }
     </script>
 </body>
-
 </html>
-
